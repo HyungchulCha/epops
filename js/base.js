@@ -683,6 +683,34 @@ function layerAlert({th, tit, cont, pf, cf, nf}){
     });
 };
 
+function referView() {
+    var btnSquare = $('.btn_view_square');
+    var btnList = $('.btn_view_list');
+    var referList = $('.refer_list');
+
+    btnSquare.click(function(){
+        var isList = referList.hasClass('refer_list_list');
+        if (isList) {
+            $(this).addClass('on');
+            btnList.removeClass('on');
+            referList.removeClass('refer_list_list');
+            afterHasCheck('.refer_box .rb_thumb', domRatio, true, (3/4));
+        }
+        return false;
+    });
+    btnList.click(function(){
+        var isList = referList.hasClass('refer_list_list');
+        if (!isList) {
+            $(this).addClass('on');
+            btnSquare.removeClass('on');
+            referList.find('.lt_p').removeClass('open');
+            referList.addClass('refer_list_list');
+            afterHasCheck('.refer_box .rb_thumb', domRatio, true, (3/4));
+        }
+        return false;
+    });
+}
+
 $(document).ready(function(){
     afterHasCheck('a', newWindow);
     afterHasCheck('.lt_l', listToggle);
@@ -696,4 +724,7 @@ $(document).ready(function(){
     afterHasCheck('.board_link', boardLinkWidth);
     fCheckToggle();
     fnSlideTab();
+
+    referView();
+    afterHasCheck('.refer_box .rb_thumb', domRatio, true, (3/4));
 });
