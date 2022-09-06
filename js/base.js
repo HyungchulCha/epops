@@ -411,14 +411,14 @@ function afterHasCheck(dom, f, isResize, ratio) {
 function listToggle() {
 
     var th = $(this),
-        thP = th.parents('.lt_p'),
+        thP = th.parent('.lt_p'),
         isOpen = thP.hasClass("open");
 
     !isOpen ? (th.append('<em class="hdn">열기</em>')) : (th.append('<em class="hdn">닫기</em>'));
 
     th.click(function() {
 
-        var thP = $(this).parents('.lt_p'),
+        var thP = $(this).parent('.lt_p'),
             isOpen = thP.hasClass("open"),
             thTxt = $(this).find(".hdn");
 
@@ -442,6 +442,8 @@ function listToggle() {
             thPP.removeClass('open');
             thPPLinkText.text('열기');
         }
+        var isRefer = thP.hasClass('refer_area');
+        isRefer && afterHasCheck('.refer_box .rb_thumb', domRatio, true, (3/4));
 
         return false;
 
@@ -495,7 +497,9 @@ function targetToggle() {
 
     th.click(function() {
         var isOpen = thTargetDiv.hasClass('open');
+        var isModal = thTargetDiv.hasClass('modal');
         !isOpen ? (
+            (isModal && $('body').addClass('of_h')),
             thTargetDiv.addClass("open"), 
             thBtnCloseTop.focus(),
             (isIbw && afterHasCheck('.ib_w', inlineBlockWidth))
@@ -504,12 +508,16 @@ function targetToggle() {
     });
 
     thBtnCloseTop.click(function() {
+        var isModal = thTargetDiv.hasClass('modal');
+        isModal && $('body').removeClass('of_h');
         thTargetDiv.removeClass("open");
         th.focus();
         return false;
     });
 
     thBtnCloseBottom.click(function() {
+        var isModal = thTargetDiv.hasClass('modal');
+        isModal && $('body').removeClass('of_h');
         thTargetDiv.removeClass("open");
         th.focus();
         return false;
@@ -549,9 +557,8 @@ function domRatio(th, ratio) {
     afterHasCheck('.ib_w', inlineBlockWidth)
 */
 function inlineBlockWidth() {
-    var thClass = $(this).parent().attr('class');
-    var isPdl = thClass.includes('pd_l');
-    var pdVal = isPdl ? Number(thClass.split(' ')[0].split('pd_l')[1]) : 0;
+    var isPdl = $(this).parent().attr('class') && $(this).parent().attr('class').includes('pd_l');
+    var pdVal = isPdl ? Number($(this).parent().attr('class').split(' ')[0].split('pd_l')[1]) : 0;
     $(this).parent().css({
         'width': $(this).outerWidth() + pdVal
     });
@@ -711,6 +718,101 @@ function referView() {
     });
 }
 
+function gnb() {
+    var gnb = $('.gnb');
+    var gnbLi = gnb.find('> div > ul > li');
+
+    gnb.find('a').each(function(){
+        var th = $(this);
+        var hasChild = th.parent().find('ul').length;
+        hasChild > 0 && th.parent().addClass('has_child');
+    });
+   
+    
+    
+
+    gnbLi.on('mouseenter', function(){
+        gnbLi.removeClass('over');
+        $(this).addClass('over');
+    });
+    gnb.find('> div').on('mouseleave', function(){
+        gnbLi.removeClass('over');
+    });
+
+    gnbLi.find('> a').on('focusin', function(){
+        gnbLi.removeClass('over');
+        $(this).parent().addClass('over');
+    });
+
+    $('.gnb > div > ul > li:first-child > a').keydown(function(e){
+        var codeKey = e.keyCode || e.which;
+        if (e.shiftKey && codeKey === 9) {
+            gnbLi.removeClass('over');
+        }
+    });
+
+    var isLast = gnbLi.last().find('li').length;
+    if (isLast > 0) {
+        $('.gnb > div > ul > li:last-child ul > li:last-child > a').keydown(function(e){
+            var codeKey = e.keyCode || e.which;
+            if (codeKey === 9) {
+                gnbLi.removeClass('over');
+            }
+        });
+    } else {
+        $('.gnb > div > ul > li:last-child > a').keydown(function(e){
+            var codeKey = e.keyCode || e.which;
+            if (codeKey === 9) {
+                gnbLi.removeClass('over');
+            }
+        });
+    }
+}
+
+function gnbSpaceCount() {
+
+    var gnb = $('.gnb');
+    var gnbLi = gnb.find('> div > ul > li');
+    var listLength = gnbLi.length;
+    var totalW = 0;
+
+    gnbLi.each(function(){
+        totalW += $(this).find('> a').outerWidth();
+    });
+    var listPd = Math.floor((1180 - totalW) / (listLength * 2));
+    gnbLi.find('> a').attr('data-pd', listPd);
+
+}
+
+var gnbPdCount = 0;
+
+function gnbPd() {
+    if (gnbPdCount === 0) {
+        $('.gnb > div > ul > li > a').each(function(){
+            var thPd = $(this).attr('data-pd')
+            $(this).css({
+                'padding-left': thPd + 'px',
+                'padding-right': thPd + 'px'
+            });
+        });
+        $('.gnb > div').css('opacity', 1);
+        gnbPdCount = 1;
+    }
+    $(window).on('resize', $.debounce(80, function(){
+        if (gnbPdCount === 0) {
+            $('.gnb > div > ul > li > a').each(function(){
+                var thPd = $(this).attr('data-pd')
+                $(this).css({
+                    'padding-left': thPd + 'px',
+                    'padding-right': thPd + 'px'
+                });
+            });
+            $('.gnb > div').css('opacity', 1);
+            gnbPdCount = 1;
+        }
+    }));
+}
+
 $(document).ready(function(){
     afterHasCheck('a', newWindow);
     afterHasCheck('.lt_l', listToggle);
@@ -727,4 +829,10 @@ $(document).ready(function(){
 
     referView();
     afterHasCheck('.refer_box .rb_thumb', domRatio, true, (3/4));
+
+    gnb();
+    setTimeout(function(){
+        gnbSpaceCount();
+        gnbPd();
+    }, 160);
 });
