@@ -548,6 +548,8 @@ a, a:focus, a:hover {text-decoration:none;}
 .btn_xs.btn_gray .ico_linemenu {background:url(../image/common/ico_linemenu_64_b.png) no-repeat center center / 80%;}
 .btn_xs.btn_line_gray .ico_arrowleft {background:url(../image/common/ico_next_64_b.png) no-repeat center center / 72%; transform:rotate(0); opacity:0.64;}
 .open .btn_xs.btn_line_gray .ico_arrowleft {transform:rotate(180deg);}
+.btn_sm.btn_arrowup .ico_arrowup {background:url(../image/common/ico_arrowup_64_b.png) no-repeat center center / 64%;}
+.btn_sm.btn_arrowup span {color:#222;}
 
 /* tag */
 .tag			{display:inline-block; font-size:0; line-height:0; border:1px solid transparent; vertical-align:middle; text-align:center;}
