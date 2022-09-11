@@ -1,0 +1,32 @@
+/* main container */
+@media (min-width:1180px) {
+  .main_container > div {width:1180px; margin:0 auto; padding-bottom:64px;}
+}
+@media (min-width:768px) and (max-width:1179px) {
+  .main_container > div {padding:0 24px; padding-bottom:48px;}
+}
+@media (max-width:767px) {
+  .main_container > div {padding:0 16px; padding-bottom:32px;}
+}
+
+/* main collection */
+.m_collection .mc_list > div > div .refer_box .rb_title > a {white-space:initial;}
+
+@media (min-width:1180px) {
+	.m_collection .mc_list > div {margin:-24px -8px 0; padding:24px 0; white-space:initial}
+	.m_collection .mc_list > div > div {width:25%; padding:24px 8px 0;}
+}
+@media (min-width:768px) and (max-width:1179px) {
+  .m_collection .mc_list {margin:0 -6px;}
+	.m_collection .mc_list > div {margin:-20px 0 0; padding:20px 0;}
+	.m_collection .mc_list > div > div {width:33.3333%; padding:20px 6px 0;}
+}
+@media (max-width:767px) {
+  .m_collection .mc_list {margin:0 -4px;}
+	.m_collection .mc_list > div {margin:-16px 0 0; padding:16px 0;}
+	.m_collection .mc_list > div > div {width:50%; padding:16px 4px 0;}
+}
+
+/* main content */
+.m_content .mc_list > ul {margin:0 !important; padding:0 !important;}
+.m_content .mc_list > ul > li {width:100% !important; padding:16px 0 !important; border-bottom:1px solid #ddd;}

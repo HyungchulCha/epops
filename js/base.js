@@ -491,18 +491,21 @@ function targetToggle() {
 
     var th = $(this),
         thTargetDiv = $("." + th.attr("data-target")),
-        thBtnCloseTop = $(thTargetDiv.find(".btn_close")[0]);
-        thBtnCloseBottom = $(thTargetDiv.find(".btn_close")[1])
-        isIbw = thTargetDiv.find('.ib_w').length > 0;
+        thBtnCloseTop = $(thTargetDiv.find(".btn_close")[0]),
+        thBtnCloseBottom = $(thTargetDiv.find(".btn_close")[1]),
+        isIbw = thTargetDiv.find('.ib_w').length > 0,
+        isCollectImageList = thTargetDiv.find('.collect_image_list').length > 0;
 
     th.click(function() {
         var isOpen = thTargetDiv.hasClass('open');
         var isModal = thTargetDiv.hasClass('modal');
+        
         !isOpen ? (
             (isModal && $('body').addClass('of_h')),
             thTargetDiv.addClass("open"), 
             thBtnCloseTop.focus(),
-            (isIbw && afterHasCheck('.ib_w', inlineBlockWidth))
+            (isIbw && afterHasCheck('.ib_w', inlineBlockWidth)),
+            (isCollectImageList && afterHasCheck('.collect_image_list > ul > li > div', domRatio, true, (3/4)))
         ) : thTargetDiv.removeClass("open");
         return false;
     });
@@ -899,7 +902,7 @@ $(document).ready(function(){
     afterHasCheck('[class^="tab_"] .on a', tabSelected);
     afterHasCheck('.ib_w', inlineBlockWidth);
     afterHasCheck('.f_unit', fUnitTextWidth);
-    afterHasCheck('.form_area', formAreaTitleWidth);
+    // afterHasCheck('.form_area', formAreaTitleWidth);
     afterHasCheck('.s_tab', subTabScroll);
     afterHasCheck('.board_link', boardLinkWidth);
     fCheckToggle();
