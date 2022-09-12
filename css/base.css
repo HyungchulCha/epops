@@ -1297,7 +1297,7 @@ textarea {max-width:100%; min-width:100%;}
 .refer_box.refer_box_one .rb_descript p {max-height:22px; text-overflow:ellipsis; white-space:nowrap;}
 .refer_list_list .refer_box.refer_box_one .rb_descript p {max-height:66px; text-overflow:initial; white-space:initial;}
 .refer_box .rb_url {margin-top:8px;}
-.refer_box .rb_url a {display:inline-block; font-size:12px; line-height:20px; color:red;}
+.refer_box .rb_url a {display:inline-block; font-size:12px; line-height:20px; color:#256dbe;}
 .refer_box .rbb_b {position:absolute; left:0; bottom:0; width:100%;}
 .refer_list_list .refer_box .rbb_b {position:static; margin-top:8px;}
 .refer_box .rb_writer {position:absolute; left:0; bottom:0; max-width:calc(100% - 60px);}

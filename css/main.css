@@ -1,15 +1,48 @@
 /* main container */
 @media (min-width:1180px) {
-  .main_container > div {width:1180px; margin:0 auto; padding-bottom:64px;}
+  .main_container > div {width:1180px; margin:0 auto; padding:32px 0 64px;}
 }
 @media (min-width:768px) and (max-width:1179px) {
-  .main_container > div {padding:0 24px; padding-bottom:48px;}
+  .main_container > div {padding:24px; padding-bottom:48px;}
 }
 @media (max-width:767px) {
-  .main_container > div {padding:0 16px; padding-bottom:32px;}
+  .main_container > div {padding:16px; padding-bottom:32px;}
 }
 
+/* main visual */
+.m_visual {position:relative; font-size:0; line-height:0;}
+.m_visual_slide {overflow:hidden;}
+.m_visual_slide .s_w .sw_l {width:100%; background:url() no-repeat #ddd center center / cover;}
+.m_visual .mv_btn {position:absolute; left:0; bottom:0;}
+.m_visual .mv_btn > * {display:inline-block; vertical-align:middle;}
+.m_visual .mv_btn .s_c {font-family:'Arial'; font-size:14px; line-height:32px; padding:0 8px;}
+.m_visual .mv_btn .s_c strong {font-weight:500;}
+.m_visual .mv_btn [class^="btn_"] {width:32px; height:32px; background:url() no-repeat center center / 48%;}
+.m_visual .mv_btn .btn_prev {background-image:url(../image/common/ico_next_64_b.png); transform:rotate(180deg)}
+.m_visual .mv_btn .btn_next {background-image:url(../image/common/ico_next_64_b.png);}
+.m_visual .mv_btn .btn_pause {background-image:url(../image/common/ico_pause_64_b.png);}
+.m_visual .mv_btn .btn_play {background-image:url(../image/common/ico_play_64_b.png);}
+
+@media (min-width:1180px) {
+  .m_visual .mv_btn {margin:32px;}
+}
+@media (min-width:768px) and (max-width:1179px) {
+  .m_visual .mv_btn {margin:24px;}
+}
+@media (max-width:767px) {
+  .m_visual .mv_btn {margin:16px;}
+}
+
+/* main top */
+.m_top {position:relative; font-size:0; line-height:0; text-align:center; margin-top:64px;}
+.m_top h3 {display:inline-block; font-size:24px; line-height:32px; font-weight:500;}
+.m_top .btn_more {position:absolute; right:0; top:50%; transform:translateY(-50%); display:inline-block; padding-right:16px;}
+.m_top .btn_more > span {display:inline-block; vertical-align:middle; font-size:12px; line-height:20px; color:#666;}
+.m_top .btn_more::after {display:block; content:''; width:16px; height:16px; background:url(../image/common/ico_next_64_b.png) no-repeat center center / 64%; opacity:0.48; position:absolute; right:0; top:50%; transform:translateY(-50%);}
+
+
 /* main collection */
+.m_collection {overflow:hidden;}
 .m_collection .mc_list > div > div .refer_box .rb_title > a {white-space:initial;}
 
 @media (min-width:1180px) {
@@ -17,16 +50,19 @@
 	.m_collection .mc_list > div > div {width:25%; padding:24px 8px 0;}
 }
 @media (min-width:768px) and (max-width:1179px) {
+  .m_collection {margin:0 -24px; padding:0 24px;}
   .m_collection .mc_list {margin:0 -6px;}
 	.m_collection .mc_list > div {margin:-20px 0 0; padding:20px 0;}
 	.m_collection .mc_list > div > div {width:33.3333%; padding:20px 6px 0;}
 }
 @media (max-width:767px) {
+  .m_collection {margin:0 -16px; padding:0 16px;}
   .m_collection .mc_list {margin:0 -4px;}
 	.m_collection .mc_list > div {margin:-16px 0 0; padding:16px 0;}
 	.m_collection .mc_list > div > div {width:50%; padding:16px 4px 0;}
 }
 
 /* main content */
+.m_content .mc_list {margin-top:16px;}
 .m_content .mc_list > ul {margin:0 !important; padding:0 !important;}
 .m_content .mc_list > ul > li {width:100% !important; padding:16px 0 !important; border-bottom:1px solid #ddd;}
