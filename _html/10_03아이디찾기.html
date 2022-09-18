@@ -34,8 +34,8 @@
                             <a href="" class="btn_search"><span class="hdn">검색하기</span></a>
                         </div>
                         <div class="gs_btn">
-                            <a href="" class="btn_setting"><span class="hdn">상세검색</span></a>
-                            <a href="" class="btn_image"><span class="hdn">이미지검색</span></a>
+                            <a href="" class="btn_setting dt_l" data-target="layer_detailsearch"><span class="hdn">상세검색</span></a>
+                            <a href="" class="btn_image dt_l" data-target="layer_imagesearch"><span class="hdn">이미지검색</span></a>
                         </div>
                     </div>
                     <div class="fl_r">
@@ -105,6 +105,69 @@
                             </div>
                         </li>
                     </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal modal_sm layer_detailsearch">
+            <div>
+                <a href="" class="btn_close">닫기</a>
+                <div class="m_t"><h4>자세히 찾기</h4></div>
+                <div class="m_c">
+                    <div class="form_area form_xs">
+                        <ul>
+                            <li>
+                                <div class="fa_title"><span class="fat_text">제목, 요약, 상세설명</span></div>
+                                <input type="text" placeholder="제목, 요약, 상세설명을 입력하세요." />
+                            </li>
+                            <li class="w_66p">
+                                <div class="fa_title"><span class="fat_text">컬렉션</span></div>
+                                <input type="text" placeholder="컬렉션을 입력하세요." />
+                            </li>
+                            <li class="w_33p">
+                                <div class="fa_title"><span class="fat_text">공개년도</span></div>
+                                <input type="text" placeholder="예) 2015 또는 2019-2022" />
+                            </li>
+                            <li>
+                                <div class="fa_title"><span class="fat_text">기여자</span></div>
+                                <input type="text" placeholder="기여자를 입력하세요." />
+                            </li>
+                            <li>
+                                <div class="fa_title"><span class="fat_text">권리기관</span></div>
+                                <input type="text" placeholder="권리기관을 입력하세요." />
+                            </li>
+                            <li>
+                                <div class="fa_title"><span class="fat_text">DOI</span></div>
+                                <input type="text" placeholder="10nnnn/XXXXXXXXXX 형식" />
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="m_b">
+                    <div class="s_btn">
+                        <a href="" class="btn btn_xs btn_blue"><span>검색</span></a>
+                        <a href="" class="btn btn_xs btn_gray btn_close"><span>취소</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal modal_sm layer_imagesearch">
+            <div>
+                <a href="" class="btn_close">닫기</a>
+                <div class="m_t"><h4>이미지 검색</h4></div>
+                <div class="m_c">
+                    <div class="imagesearch_upload">
+                        <!-- <p>여기를 클릭하여 검색할 이미지를 선택하거나 <br />이미지를 끌어서 여기에 올려 놓으세요.</p> -->
+                        <img src="../image/ex_refer_image_target.jpeg" alt="">
+                        <div class="iu_line" style="left:32px; top:64px; width:80px; height:48px;"></div>
+                    </div>
+                </div>
+                <div class="m_b">
+                    <div class="s_btn">
+                        <a href="" class="btn btn_xs btn_line_blue"><span>전체영역선택</span></a>
+                        <a href="" class="btn btn_xs btn_blue"><span>검색</span></a>
+                        <a href="" class="btn btn_xs btn_gray btn_close"><span>취소</span></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -181,23 +244,36 @@
 
                 <!-- s: content -->
 
-                <div class="member member_agree">
-                    <div class="m_top ta_c">
-                        <span><em class="tc_2564e7">VLab 오신 걸 환영</em>해요.</span>
-                        <p>먼저 이용약관과 개인정보처리방침을 확인해주세요.</p>
+                <div class="member member_login">
+                    <div class="form_area form_sm">
+                        <ul>
+                            <li>
+                                <div class="fa_title"><span class="fat_text">아이디</span></div>
+                                <div class="f_fail"><input type="text" placeholder="아이디를 입력하세요"></div>
+                            </li>
+                            <li>
+                                <div class="fa_title"><span class="fat_text">비밀번호</span></div>
+                                <div class="f_fail"><input type="password" placeholder="비밀번호를 입력하세요"></div>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="ma_b form_sm">
-                        <div class="f_check mg_t24"><input type="checkbox" name="" id=""><label for="" class="f_txt">이용약관에 동의합니다. <em class="tc_2564e7">(필수)</em></label></div>
-                        <div class="ma_descript mg_t8">
-                            약관
-                        </div>
-                        <div class="f_check mg_t24"><input type="checkbox" name="" id=""><label for="" class="f_txt">개인정보수집 및 이용에 동의합니다. <em class="tc_2564e7">(필수)</em></label></div>
-                        <div class="ma_descript mg_t8">
-                            약관
+                    <div class="ml_find form_xs cl_b_aftr mg_t16">
+                        <div class="fl_l">
+                            <div class="f_check mg_r16"><input type="checkbox" name="" id=""><label for="" class="f_txt">아이디 저장</label></div>
+                            <div class="f_check mg_r16"><input type="checkbox" name="" id=""><label for="" class="f_txt">자동 로그인</label></div>
                         </div>
                     </div>
+                    <span class="text_14 tc_e73132 ta_c mg_t16">아이디 또는 비밀번호를 잘못 입력하셨습니다. 입력하신 내용을 다시 확인해주세요.</span>
                     <div class="s_btn mg_t24">
-                        <a href="" class="btn btn_md btn_blue w_100p"><span>다음</span></a>
+                        <a href="" class="btn btn_md btn_blue w_100p"><span>로그인</span></a>
+                    </div>
+                    <div class="ml_list mg_t16">
+                        <ul>
+                            <li><a href="" class="btn_modal" data-modal-target="modal-02">아이디 찾기</a></li>
+                            <li><a href="" class="btn_modal" data-modal-target="modal-03">비밀번호 찾기</a></li>
+                            <li><a href="">회원가입</a></li>
+                            <li><a href="" class="btn_modal" data-modal-target="modal-01">로그인 팝업(테스트)</a></li>
+                        </ul>
                     </div>
                 </div>
 

@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 
-    <title>로그인</title>
+    <title>내컬렉션 등록수정</title>
 
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -242,39 +242,130 @@
         <div class="container">
             <div>
 
-                <!-- s: content -->
-
-                <div class="member member_login">
-                    <div class="form_area form_sm">
-                        <ul>
-                            <li>
-                                <div class="fa_title"><span class="fat_text">아이디</span></div>
-                                <div class="f_fail"><input type="text" placeholder="아이디를 입력하세요"></div>
-                            </li>
-                            <li>
-                                <div class="fa_title"><span class="fat_text">비밀번호</span></div>
-                                <div class="f_fail"><input type="password" placeholder="비밀번호를 입력하세요"></div>
-                            </li>
-                        </ul>
+                <div class="sub_top cl_b_aftr">
+                    <div class="fl_l">
+                        <h3 class="st_title">내컬렉션</h3>
                     </div>
-                    <div class="ml_find form_xs cl_b_aftr mg_t16">
-                        <div class="fl_l">
-                            <div class="f_check mg_r16"><input type="checkbox" name="" id=""><label for="" class="f_txt">아이디 저장</label></div>
-                            <div class="f_check mg_r16"><input type="checkbox" name="" id=""><label for="" class="f_txt">자동 로그인</label></div>
+                    <div class="fl_r">
+                        <div class="st_navigation">
+                            <ul>
+                                <li><a href=""><strong class="hdn">홈</strong></a></li>
+                                <li><a href="">컬렉션</a></li>
+                                <li><span>내컬렉션</span></li>
+                            </ul>
                         </div>
                     </div>
-                    <span class="text_14 tc_e73132 ta_c mg_t16">아이디 또는 비밀번호를 잘못 입력하셨습니다. 입력하신 내용을 다시 확인해주세요.</span>
-                    <div class="s_btn mg_t24">
-                        <a href="" class="btn btn_md btn_blue w_100p"><span>로그인</span></a>
+                </div>
+
+                <!-- s: content -->
+
+                <div class="s_top dlr_va_m mg_t32">
+                    <div class="fl_l">
+                        <span class="text_16 fw_500">제목</span>
                     </div>
-                    <div class="ml_list mg_t16">
-                        <ul>
-                            <li><a href="" class="btn_modal" data-modal-target="modal-02">아이디 찾기</a></li>
-                            <li><a href="" class="btn_modal" data-modal-target="modal-03">비밀번호 찾기</a></li>
-                            <li><a href="">회원가입</a></li>
-                            <li><a href="" class="btn_modal" data-modal-target="modal-01">로그인 팝업(테스트)</a></li>
-                        </ul>
+                </div>
+                <div class="form_xs"><input type="text" placeholder="컬렉션 제목을 입력하세요."></div>
+
+                <div class="s_top dlr_va_m mg_t24">
+                    <div class="fl_l">
+                        <span class="text_16 fw_500">설명</span>
+                        <span class="text_12 tc_666666">컬렉션에 대한 설명을 입력하세요. (선택)</span>
                     </div>
+                </div>
+                <div class="form_xs"><textarea></textarea></div>
+
+                <div class="s_top dlr_va_m mg_t24">
+                    <div class="fl_l">
+                        <span class="text_16 fw_500">사진(이미지)</span>
+                        <span class="text_12 tc_666666">컬렉션 사진 또는 이미지를 선택하세요.</span>
+                    </div>
+                    <div class="fl_r">
+                        <a href="" class="btn btn_xs btn_gray"><span>초기화</span></a>
+                        <a href="" class="btn btn_xs btn_line_blue"><span>찾기</span></a>
+                    </div>
+                </div>
+                <p class="no_list mg_t8">등록된 이미자가 없습니다.</p>
+
+                <div class="s_top dlr_va_m mg_t24">
+                    <div class="fl_l">
+                        <span class="text_16 fw_500">사진(이미지)</span>
+                        <span class="text_12 tc_666666">컬렉션 사진 또는 이미지를 선택하세요.</span>
+                    </div>
+                    <div class="fl_r">
+                        <a href="" class="btn btn_xs btn_gray"><span>초기화</span></a>
+                        <a href="" class="btn btn_xs btn_line_blue"><span>찾기</span></a>
+                    </div>
+                </div>
+                <div class="collect_image_list">
+                    <ul class="cl_b_aftr">
+                        <li>
+                            <div style="background-image:url(../image/ex_refer_image_target.jpeg);">
+                                <a href="" class="btn_delete"></a>
+                            </div>
+                        </li>
+                        <li>
+                            <div style="background-image:url(../image/ex_refer_image_target.jpeg);">
+                                <a href="" class="btn_delete"></a>
+                            </div>
+                        </li>
+                        <li>
+                            <div style="background-image:url(../image/ex_refer_image_target.jpeg);">
+                                <a href="" class="btn_delete"></a>
+                            </div>
+                        </li>
+                        <li>
+                            <div style="background-image:url(../image/ex_refer_image_target.jpeg);">
+                                <a href="" class="btn_delete"></a>
+                            </div>
+                        </li>
+                        <li>
+                            <div style="background-image:url(../image/ex_refer_image_target.jpeg);">
+                                <a href="" class="btn_delete"></a>
+                            </div>
+                        </li>
+                        <li>
+                            <div style="background-image:url(../image/ex_refer_image_target.jpeg);">
+                                <a href="" class="btn_delete"></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="s_top dlr_va_m mg_t24">
+                    <div class="fl_l">
+                        <span class="text_16 fw_500">컬렉션 공개</span>
+                        <span class="text_12 tc_666666">공개 설정 시 모든 이용자들에게 컬렉션이 공개됩니다.</span>
+                    </div>
+                </div>
+                <div class="form_sm">
+                    <div class="f_check mg_r16"><input type="checkbox" name="" id=""><label for="" class="f_txt">공개</label></div>
+                    <div class="f_check"><input type="checkbox" name="" id=""><label for="" class="f_txt">비공개</label></div>
+                </div>
+
+                <div class="s_top dlr_va_m mg_t24">
+                    <div class="fl_l">
+                        <span class="text_16 fw_500">컬렉션 공유</span>
+                        <span class="text_12 tc_666666">공유 설정 시 모든 이용자들이 콘텐츠를 등록 할 수 있도록 공유됩니다.</span>
+                    </div>
+                </div>
+                <div class="form_sm">
+                    <div class="f_check mg_r16"><input type="checkbox" name="" id=""><label for="" class="f_txt">공유</label></div>
+                    <div class="f_check"><input type="checkbox" name="" id=""><label for="" class="f_txt">비공유</label></div>
+                </div>
+
+                <div class="s_top dlr_va_m mg_t24">
+                    <div class="fl_l">
+                        <span class="text_16 fw_500">상세설명 기본양식</span>
+                        <span class="text_12 tc_666666">상세설명 작성을 위한 양식을 작성해주세요.</span>
+                    </div>
+                    <div class="fl_r">
+                        <a href="" class="btn btn_xs btn_line_blue"><i class="ico_doc"></i><span>기본양식</span></a>
+                    </div>
+                </div>
+
+                <div class="s_btn mg_t64">
+                    <a href="" class="btn btn_sm btn_black"><span>취소</span></a>
+                    <a href="" class="btn btn_sm btn_blue"><span>등록</span></a>
                 </div>
 
                 <!-- e: content -->

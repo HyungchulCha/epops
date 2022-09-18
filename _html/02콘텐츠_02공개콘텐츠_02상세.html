@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+    <title>공개콘텐츠 상세</title>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css">
+
+    <script src="../js/jquery-3.4.2.min.js"></script>
+    <script src="../js/jquery.throttle-debounce.min.js"></script>
+    <script src="../js/swiper-bundle.min.js"></script>
+    <script src="../js/base.js"></script>
+
+</head>
+<body>
+
+    <div class="wrap">
+
+        <div class="header">
+            <div class="h_t">
+                <div class="cl_b_aftr">
+                    <div class="fl_l">
+                        <h1 class="h_logo"><a href=""><span class="hdn">epops</span></a></h1>
+                    </div>
+                    <div class="global_search">
+                        <div class="gs_form">
+                            <label for="" class="hdn">검색</label>
+                            <input type="text" placeholder="검색어를 입력하세요." />
+                            <a href="" class="btn_search"><span class="hdn">검색하기</span></a>
+                        </div>
+                        <div class="gs_btn">
+                            <a href="" class="btn_setting dt_l" data-target="layer_detailsearch"><span class="hdn">상세검색</span></a>
+                            <a href="" class="btn_image dt_l" data-target="layer_imagesearch"><span class="hdn">이미지검색</span></a>
+                        </div>
+                    </div>
+                    <div class="fl_r">
+                        <div class="tnb dp_n_t dp_n_m">
+                            <div class="t_lang lt_p">
+                                <a href="" class="lt_l">한국어</a>
+                                <div class="lt_c">
+                                    <ul>
+                                        <li><a href="">한국어</a></li>
+                                        <li><a href="">English</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="t_menu"><a href=""></a></div>
+                            <div class="t_login"><a href="">로그인</a></div>
+                            <div class="t_user lt_p">
+                                <a href="" class="lt_l"><span>홍길동</span></a>
+                                <div class="lt_c">
+                                    <ul>
+                                        <li><a href="">내 프로필</a></li>
+                                        <li><a href="">회원정보</a></li>
+                                        <li><a href="">로그아웃</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="" class="btn_globalsearch"><span class="hdn">검색하기</span></a>
+                        <a href="" class="btn_globalmenu"><span class="hdn">전체메뉴보기</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="gnb dp_n_t dp_n_m">
+                <div>
+                    <ul>
+                        <li>
+                            <a href=""><span>콘텐트</span></a>
+                            <div>
+                                <ul>
+                                    <li><a href="">내 콘텐트</a></li>
+                                    <li><a href="">공개 콘텐트</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href=""><span>컬렉션</span></a>
+                            <div>
+                                <ul>
+                                    <li><a href="">내 컬렉션</a></li>
+                                    <li><a href="">공개 컬렉션</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href=""><span>등록</span></a></li>
+                        <li><a href=""><span>검토</span></a></li>
+                        <li><a href=""><span>회원</span></a></li>
+                        <li><a href=""><span>이미지 유사도 검사</span></a></li>
+                        <li>
+                            <a href=""><span>소개</span></a>
+                            <div>
+                                <ul>
+                                    <li><a href="">EPOPS 소개</a></li>
+                                    <li><a href="">정책</a></li>
+                                    <li><a href="">원칙</a></li>
+                                    <li><a href="">연락처</a></li>
+                                    <li><a href="">도움말</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal modal_sm layer_detailsearch">
+            <div>
+                <a href="" class="btn_close">닫기</a>
+                <div class="m_t"><h4>자세히 찾기</h4></div>
+                <div class="m_c">
+                    <div class="form_area form_xs">
+                        <ul>
+                            <li>
+                                <div class="fa_title"><span class="fat_text">제목, 요약, 상세설명</span></div>
+                                <input type="text" placeholder="제목, 요약, 상세설명을 입력하세요." />
+                            </li>
+                            <li class="w_66p">
+                                <div class="fa_title"><span class="fat_text">컬렉션</span></div>
+                                <input type="text" placeholder="컬렉션을 입력하세요." />
+                            </li>
+                            <li class="w_33p">
+                                <div class="fa_title"><span class="fat_text">공개년도</span></div>
+                                <input type="text" placeholder="예) 2015 또는 2019-2022" />
+                            </li>
+                            <li>
+                                <div class="fa_title"><span class="fat_text">기여자</span></div>
+                                <input type="text" placeholder="기여자를 입력하세요." />
+                            </li>
+                            <li>
+                                <div class="fa_title"><span class="fat_text">권리기관</span></div>
+                                <input type="text" placeholder="권리기관을 입력하세요." />
+                            </li>
+                            <li>
+                                <div class="fa_title"><span class="fat_text">DOI</span></div>
+                                <input type="text" placeholder="10nnnn/XXXXXXXXXX 형식" />
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="m_b">
+                    <div class="s_btn">
+                        <a href="" class="btn btn_xs btn_blue"><span>검색</span></a>
+                        <a href="" class="btn btn_xs btn_gray btn_close"><span>취소</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal modal_sm layer_imagesearch">
+            <div>
+                <a href="" class="btn_close">닫기</a>
+                <div class="m_t"><h4>이미지 검색</h4></div>
+                <div class="m_c">
+                    <div class="imagesearch_upload">
+                        <!-- <p>여기를 클릭하여 검색할 이미지를 선택하거나 <br />이미지를 끌어서 여기에 올려 놓으세요.</p> -->
+                        <img src="../image/ex_refer_image_target.jpeg" alt="">
+                        <div class="iu_line" style="left:32px; top:64px; width:80px; height:48px;"></div>
+                    </div>
+                </div>
+                <div class="m_b">
+                    <div class="s_btn">
+                        <a href="" class="btn btn_xs btn_line_blue"><span>전체영역선택</span></a>
+                        <a href="" class="btn btn_xs btn_blue"><span>검색</span></a>
+                        <a href="" class="btn btn_xs btn_gray btn_close"><span>취소</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="global_menu">
+            <div>
+                <a href="" class="btn_close"></a>
+                <div class="gm_t">
+                    <div class="gm_lang lt_p">
+                        <a href="" class="lt_l">한국어</a>
+                        <div class="lt_c">
+                            <ul>
+                                <li><a href="">한국어</a></li>
+                                <li><a href="">English</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="gm_menu"><a href=""></a></div>
+                </div>
+                <div class="gm_c">
+                    <!-- <a href="" class="btn_login"><span>로그인</span></a> -->
+                    <div class="gm_user"><span>홍길동홍길동홍길동홍길동홍길동홍길동홍길동홍길동홍길동홍길동</span></div>
+                    <div class="gm_btn">
+                        <ul>
+                            <li><a href="">내 프로필</a></li>
+                            <li><a href="">회원정보</a></li>
+                            <li><a href="">로그아웃</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="gm_b">
+                    <ul>
+                        <li>
+                            <a href="">콘텐트</a>
+                            <div>
+                                <ul>
+                                    <li><a href="">내 콘텐트</a></li>
+                                    <li><a href="">공개 콘텐트</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="">컬렉션</a>
+                            <div>
+                                <ul>
+                                    <li><a href="">내 컬렉션</a></li>
+                                    <li><a href="">공개 컬렉션</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="">등록</a></li>
+                        <li><a href="">검토</a></li>
+                        <li><a href="">회원</a></li>
+                        <li><a href="">이미지 유사도 검사</a></li>
+                        <li>
+                            <a href="">소개</a>
+                            <div>
+                                <ul>
+                                    <li><a href="">EPOPS 소개</a></li>
+                                    <li><a href="">정책</a></li>
+                                    <li><a href="">원칙</a></li>
+                                    <li><a href="">연락처</a></li>
+                                    <li><a href="">도움말</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+
+                <div class="sub_top cl_b_aftr">
+                    <div class="fl_l">
+                        <h3 class="st_title">공개콘텐트</h3>
+                    </div>
+                    <div class="fl_r">
+                        <div class="st_navigation">
+                            <ul>
+                                <li><a href=""><strong class="hdn">홈</strong></a></li>
+                                <li><a href="">콘텐트</a></li>
+                                <li><span>공개콘텐트</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- s: content -->
+
+                <div class="s_top s_top_bb dlr_va_m mg_t32">
+                    <div class="fl_l"><p class="text_14 tc_666666">이 콘텐츠는 최종내용이 아닙니다. 변경이력을 확인해주세요.</p></div>
+                    <div class="fl_r"><a href="" class="btn btn_xs btn_line_gray"><span>목록으로 돌아가기</span></a></div>
+                </div>
+
+                <div class="content_detail_view mg_t32">
+                    <div class="cdv_t">
+
+                        <div class="cdv_review">
+                            <span class="text_20 fw_500">과냉각 열교환기 용량 변화에 따른 인젝션 히트펌프의 성능 특성과냉각 열교환기 용량 변화에 따른 인젝션 히트펌프의 성능 특성</span>
+                            <div class="cdv_class mg_t16">
+                                <ul>
+                                    <li>
+                                        <span>Choi, Jong Min</span>
+                                        <strong> (Department of Mechanical Engineering, Hanbant National University) ;</strong>
+                                        <a href="" class="btn_mail"></a>
+                                        <a href="" class="btn_id"></a>
+                                        <a href="" class="btn_isni"></a>
+                                    </li>
+                                    <li>
+                                        <span>Choi, Jong Min</span>
+                                        <strong> (Department of Mechanical National University) ;</strong>
+                                        <a href="" class="btn_mail"></a>
+                                    </li>
+                                    <li>
+                                        <span>Choi, Jong Min</span>
+                                        <strong> (Department of Mechanical Engineering, Hanbant Nati;</strong>
+                                        <a href="" class="btn_mail"></a>
+                                    </li>
+                                    <li>
+                                        <span>Choi, Jong Min</span>
+                                        <strong> (Depangineering, Hanbant National University) ;</strong>
+                                        <a href="" class="btn_mail"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="cdv_field mg_t16">
+                                <ul>
+                                    <li><span>등록 : 2000.00.00</span></li>
+                                    <li><span>심사 : 2000.00.00</span></li>
+                                    <li><span>발행 : 2000.00.00</span></li>
+                                    <li><span>공개 : 2000.00.00</span></li>
+                                    <li><span>변경일 : 2000.00.00</span></li>
+                                </ul>
+                            </div>
+                            <div class="mg_t16">
+                                <p class="text_12 dp_ib mg_r16"><a href="" class="link_text">https://digitali/cgi/viewcontent.cgi?article=10763&context=libphilpracviewconte</a></p>
+                                <a href="" class="btn btn_xx btn_gray mg_r4"><span>복사</span></a>
+                                <a href="" class="btn btn_xx btn_gray dt_l" data-target="modal_01"><span>인용</span></a>
+                            </div>
+
+                            <div class="cdvr_count">
+                                <ul>
+                                    <li>
+                                        <div>
+                                            <span>조회</span>
+                                            <strong>243,456</strong>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <span>다운로드</span>
+                                            <strong>3,456</strong>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <span>인용</span>
+                                            <strong>697</strong>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="cdv_b cl_b_aftr">
+                        <div class="cdvb_l">
+                            <span class="text_16 fw_500">요약</span>
+                            <p class="text_14 tc_666666 mg_t8">본 연구는 중간지원조직 주도의 리빙랩 사례를 살펴보고 리빙랩 플랫폼으로의 발정가능성을 탐색한다. 분석 사계는 국내에서중간지원조직 주도로 리빙랩 플랫폼을 구축한 대표 사례인 '서울혁신파크 리빙랩', 성남 고렬친화종합체험관의본 연구는 중간지원조직 주도의 리빙랩 사례를 살펴보고 리빙랩 플랫폼으로의 발정가능성을 탐색한다. 분석 사계는 국내에서중간지원조직 주도로 리빙랩 플랫폼을 구축한 대표 사례인 '서울혁신파크 리빙랩', 성남 고렬친화종합체험관의본 연구는 중간지원조직 주도의 리빙랩 사례를 살펴보고 리빙랩 플랫폼으로의 발정가능성을 탐색한다. 분석 사계는 국내에서중간지원조직 주도로 리빙랩 플랫폼을 구축한 대표 사례인 '서울혁신파크 리빙랩', 성남 고렬친화종합체험관의본 연구는 중간지원조직 주도의 리빙랩 사례를 살펴보고 리빙랩 플랫폼으로의 발정가능성을 탐색한다. 분석 사계는 국내에서중간지원조직 주도로 리빙랩 플랫폼을 구축한 대표 사례인 '서울혁신파크 리빙랩', 성남 고렬친화종합체험관의본 연구는 중간지원조직 주도의 리빙랩 사례를 살펴보고 리빙랩 플랫폼으로의 발정가능성을 탐색한다. 분석 사계는 국내에서중간지원조직 주도로 리빙랩 플랫폼을 구축한 대표 사례인 '서울혁신파크 리빙랩', 성남 고렬친화종합체험관의</p>
+                            <span class="text_16 fw_500 mg_t32">데이터 파일</span>
+                            <div class="cdv_data_list">
+                                <ul class="cl_b_aftr">
+                                    <li>
+                                        <div>
+
+                                            <div class="refer_box">
+                                                <div class="rb_thumb">
+                                                    <div class="rbt_btns">
+                                                        <a href="" class="btn_search"></a>
+                                                        <a href="" class="btn_download"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="rb_b">
+                                                    <div class="rb_title"><a href="">Performance Characteristics of a Vapor Injection Heat Pump System with Different Sub-cooler Capacity</a></div>
+                                                    <div class="rbb_b cl_b_aftr">
+                                                        <div class="fl_l"><div class="rb_download"><span>23345634</span></div></div>
+                                                        <div class="fl_r"><div class="rb_date"><span>2000-00-00</span></div></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+
+                                            <div class="refer_box">
+                                                <div class="rb_thumb">
+                                                    <div class="rbt_btns">
+                                                        <a href="" class="btn_search"></a>
+                                                        <a href="" class="btn_download"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="rb_b">
+                                                    <div class="rb_title"><a href="">Performance Characteristics of a Vapor Injection Heat Pump System with Different Sub-cooler Capacity</a></div>
+                                                    <div class="rbb_b cl_b_aftr">
+                                                        <div class="fl_l"><div class="rb_download"><span>23345634</span></div></div>
+                                                        <div class="fl_r"><div class="rb_date"><span>2000-00-00</span></div></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+
+                                            <div class="refer_box">
+                                                <div class="rb_thumb">
+                                                    <div class="rbt_btns">
+                                                        <a href="" class="btn_search"></a>
+                                                        <a href="" class="btn_download"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="rb_b">
+                                                    <div class="rb_title"><a href="">Performance Characteristics of a Vapor Injection Heat Pump System with Different Sub-cooler Capacity</a></div>
+                                                    <div class="rbb_b cl_b_aftr">
+                                                        <div class="fl_l"><div class="rb_download"><span>23345634</span></div></div>
+                                                        <div class="fl_r"><div class="rb_date"><span>2000-00-00</span></div></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+
+                                            <div class="refer_box">
+                                                <div class="rb_thumb">
+                                                    <div class="rbt_btns">
+                                                        <a href="" class="btn_search"></a>
+                                                        <a href="" class="btn_download"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="rb_b">
+                                                    <div class="rb_title"><a href="">Performance Characteristics of a Vapor Injection Heat Pump System with Different Sub-cooler Capacity</a></div>
+                                                    <div class="rbb_b cl_b_aftr">
+                                                        <div class="fl_l"><div class="rb_download"><span>23345634</span></div></div>
+                                                        <div class="fl_r"><div class="rb_date"><span>2000-00-00</span></div></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+
+                                            <div class="refer_box">
+                                                <div class="rb_thumb">
+                                                    <div class="rbt_btns">
+                                                        <a href="" class="btn_search"></a>
+                                                        <a href="" class="btn_download"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="rb_b">
+                                                    <div class="rb_title"><a href="">Performance Characteristics of a Vapor Injection Heat Pump System with Different Sub-cooler Capacity</a></div>
+                                                    <div class="rbb_b cl_b_aftr">
+                                                        <div class="fl_l"><div class="rb_download"><span>23345634</span></div></div>
+                                                        <div class="fl_r"><div class="rb_date"><span>2000-00-00</span></div></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <span class="text_16 fw_500 mg_t32">상세설명</span>
+                            <p class="text_14 tc_666666 mg_t8">본 연구는 중간지원조직 주도의 리빙랩 사례를 살펴보고 리빙랩 플랫폼으로의 발정가능성을 탐색한다. 분석 사계는 국내에서중간지원조직 주도로 리빙랩 플랫폼을 구축한 대표 사례인 '서울혁신파크 리빙랩', 성남 고렬친화종합체험관의본 연구는 중간지원조직 주도의 리빙랩 사례를 살펴보고 리빙랩 플랫폼으로의 발정가능성을 탐색한다. 분석 사계는 국내에서중간지원조직 주도로 리빙랩 플랫폼을 구축한 대표 사례인 '서울혁신파크 리빙랩', 성남 고렬친화종합체험관의본 연구는 중간지원조직 주도의 리빙랩 사례를 살펴보고 리빙랩 플랫폼으로의 발정가능성을 탐색한다. 분석 사계는 국내에서중간지원조직 주도로 리빙랩 플랫폼을 구축한 대표 사례인 '서울혁신파크 리빙랩', 성남 고렬친화종합체험관의본 연구는 중간지원조직 주도의 리빙랩 사례를 살펴보고 리빙랩 플랫폼으로의 발정가능성을 탐색한다. 분석 사계는 국내에서중간지원조직 주도로 리빙랩 플랫폼을 구축한 대표 사례인 '서울혁신파크 리빙랩', 성남 고렬친화종합체험관의본 연구는 중간지원조직 주도의 리빙랩 사례를 살펴보고 리빙랩 플랫폼으로의 발정가능성을 탐색한다. 분석 사계는 국내에서중간지원조직 주도로 리빙랩 플랫폼을 구축한 대표 사례인 '서울혁신파크 리빙랩', 성남 고렬친화종합체험관의
+
+                                본 연구는 중간지원조직 주도의 리빙랩 사례를 살펴보고 리빙랩 플랫폼으로의 발정가능성을 탐색한다. 분석 사계는 국내에서중간지원조직 주도로 리빙랩 플랫폼을 구축한 대표 사례인 '서울혁신파크 리빙랩', 성남 고렬친화종합체험관의본 연구는 중간지원조직 주도의
+                                
+                                본 연구는 중간지원조직 주도의 리빙랩 사례를 살펴보고 리빙랩 플랫폼으로의 발정가능성을 탐색한다. 분석 사계는 국내에서중간지원조직 주도로 리빙랩 플랫폼을 구축한 대표 사례인 '서울혁신파크 리빙랩', 성남 고렬친화종합체험관의본 연구는 중간지원조직 주도의본 연구는 중간지원조직 주도의 리빙랩 사례를 살펴보고 리빙랩 플랫폼으로의 발정가능성을 탐색한다. 분석 사계는 국내에서중간지원조직 주도로 리빙랩 플랫폼을 구축한 대표 사례인 '서울혁신파크 리빙랩', 성남 고렬친화종합체험관의본 연구는 중간지원조직 주도의</p>
+                            <span class="text_16 fw_500 mg_t32">관련링크</span>
+                            <div class="cdv_relate_list mg_t8">
+                                <ul>
+                                    <li>
+                                        <div class="s_top dlr_va_m">
+                                            <div class="fl_l"><p class="text_14"><a href="" class="link_text">https://digitali/cgi/viewcontent.cgi?article=10763&context=libphilpracviewconte</a></p></div>
+                                            <div class="fl_r">
+                                                <span class="text_12 tc_666666 mg_r12">Entity is related to this dataset.</span>
+                                                <span class="text_12 tc_666666">Entity is related to this dataset.</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="s_top dlr_va_m">
+                                            <div class="fl_l"><p class="text_14"><a href="" class="link_text">https://digitalcommons.unl.edu/cgi/cgi/viewcontent.cgi?article=10</a></p></div>
+                                            <div class="fl_r">
+                                                <span class="text_12 tc_666666 mg_r12">Entity is related to this dataset.</span>
+                                                <span class="text_12 tc_666666">Entity is related to this dataset.</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="cdvb_r">
+
+                            <div class="s_top dlr_va_m">
+                                <div class="fl_l"><span class="text_16">컬렉션</span></div>
+                            </div>
+                            <div class="mg_t8">
+                                <span class="text_12 tc_666666">컬렉션1컬렉션컬렉션컬렉션컬렉션컬렉션컬렉션</span>
+                                <span class="text_12 tc_666666">컬렉션1컬렉션컬렉션컬렉션컬렉션컬렉션컬렉션</span>
+                                <span class="text_12 tc_666666">컬렉션1컬렉션컬렉션컬렉션컬렉션컬렉션컬렉션</span>
+                                <span class="text_12 tc_666666">컬렉션1컬렉션컬렉션컬렉션컬렉션컬렉션컬렉션</span>
+                            </div>
+                            
+                            <div class="s_top dlr_va_m mg_t32">
+                                <div class="fl_l"><span class="text_16">분류</span></div>
+                            </div>
+                            <div class="mg_t8">
+                                <span class="text_12 tc_666666">컬렉션1컬렉션컬렉션컬렉션컬렉션컬렉션컬렉션</span>
+                                <span class="text_12 tc_666666">컬렉션1컬렉션컬렉션컬렉션컬렉션컬렉션컬렉션</span>
+                                <span class="text_12 tc_666666">컬렉션1컬렉션컬렉션컬렉션컬렉션컬렉션컬렉션</span>
+                                <span class="text_12 tc_666666">컬렉션1컬렉션컬렉션컬렉션컬렉션컬렉션컬렉션</span>
+                            </div>
+                            
+                            <div class="s_top dlr_va_m mg_t32">
+                                <div class="fl_l"><span class="text_16">공개일자</span></div>
+                            </div>
+                            <div class="mg_t8">
+                                <span class="text_12 tc_666666">컬렉션1컬렉션컬렉션컬렉션컬렉션컬렉션컬렉션</span>
+                                <span class="text_12 tc_666666">컬렉션1컬렉션컬렉션컬렉션컬렉션컬렉션컬렉션</span>
+                                <span class="text_12 tc_666666">컬렉션1컬렉션컬렉션컬렉션컬렉션컬렉션컬렉션</span>
+                                <span class="text_12 tc_666666">컬렉션1컬렉션컬렉션컬렉션컬렉션컬렉션컬렉션</span>
+                            </div>
+                            
+                            <div class="s_top dlr_va_m mg_t32">
+                                <div class="fl_l"><span class="text_16">권리기관</span></div>
+                            </div>
+                            <div class="mg_t8">
+                                <span class="text_12 tc_666666">컬렉션1컬렉션컬렉션컬렉션컬렉션컬렉션컬렉션</span>
+                                <span class="text_12 tc_666666">컬렉션1컬렉션컬렉션컬렉션컬렉션컬렉션컬렉션</span>
+                                <span class="text_12 tc_666666">컬렉션1컬렉션컬렉션컬렉션컬렉션컬렉션컬렉션</span>
+                                <span class="text_12 tc_666666">컬렉션1컬렉션컬렉션컬렉션컬렉션컬렉션컬렉션</span>
+                            </div>
+
+                            <div class="s_top dlr_va_m mg_t32">
+                                <div class="fl_l"><span class="text_16">라이센스</span></div>
+                            </div>
+                            <div class="mg_t8">
+                                <span class="text_12 tc_blue">Apache License 2.0 CC BY-NC 2.0 KR</span>
+                                <span class="text_12 tc_blue">Apache License 2.0 CC BY-NC 2.0 KR</span>
+                            </div>
+
+                            <div class="s_top dlr_va_m mg_t32">
+                                <div class="fl_l"><span class="text_16">변경이력</span></div>
+                            </div>
+                            <div class="mg_t8">
+                                <span class="text_12 tc_blue">2022-00-00  00:00  변경</span>
+                                <span class="text_12 tc_blue">2022-00-00  00:00  변경</span>
+                                <span class="text_12 tc_blue">2022-00-00  00:00  변경</span>
+                                <span class="text_12 tc_blue">2022-00-00  00:00  변경</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- e: content -->
+
+            </div>
+        </div>
+
+        <div class="s_check">
+            <div class="sc_p dp_n_t dp_n_m"><span class="hdn">너비 1180px 이상</span></div>
+            <div class="sc_t dp_n_p dp_n_m"><span class="hdn">너비 768px - 1179px</span></div>
+            <div class="sc_m dp_n_p dp_n_t"><span class="hdn">너비 767px 이하</span></div>
+        </div>
+
+        <div class="footer">
+            <div>
+                <h2 class="f_logo"></h2>
+                <div class="fnb">
+                    <ul>
+                        <li><a href="">이용약관</a></li>
+                        <li><a href="">개인정보처리방침</a></li>
+                        <li><a href="">찾아오시는 길</a></li>
+                        <li><a href="">기관소개</a></li>
+                    </ul>
+                </div>
+                <div class="f_info">
+                    <p class="fi_address">(우)34141 대전광역시 유성구 대학로 245 한국과학기술정보연구원</p>
+                    <ul class="fi_phone">
+                        <li>전화번호 :  042) 869-1004,1234</li>
+                        <li>팩스 :  042) 869-1091</li>
+                        <li>이메일 : koreascience@kisti.re.kr</li>
+                    </ul>
+                    <p class="fi_copyright">Copyright ⓒ KISTI. All Rights Reserved.</p>
+                </div>
+                <div class="f_r">
+                    <div class="f_sns">
+                        <ul>
+                            <li class="fs_facebook"><a href=""></a></li>
+                            <li class="fs_twitter"><a href=""></a></li>
+                        </ul>
+                    </div>
+                    <div class="f_relate lt_p">
+                        <a href="" class="lt_l"><span>관련사이트</span></a>
+                        <div class="lt_c">
+                            <ul>
+                                <li><a href="">Korea DOI Center</a></li>
+                                <li><a href="">DOI References Converter</a></li>
+                                <li><a href="">International DOI Foundation</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="modal modal_sm modal_01">
+        <div>
+            <a href="" class="btn_close">닫기</a>
+            <div class="m_t"><h4>인용형식의 참고문헌 보기</h4></div>
+            <div class="m_c">
+                <div class="form_area form_xs">
+                    <ul>
+                        <li>
+                            <div class="fa_title"><span class="fat_text">APA</span></div>
+                            <input type="text" />
+                        </li>
+                        <li>
+                            <div class="fa_title"><span class="fat_text">Harvard</span></div>
+                            <input type="text" />
+                        </li>
+                        <li>
+                            <div class="fa_title"><span class="fat_text">IEEE</span></div>
+                            <input type="text" />
+                        </li>
+                        <li>
+                            <div class="fa_title"><span class="fat_text">MLA</span></div>
+                            <input type="text" />
+                        </li>
+                        <li>
+                            <div class="fa_title"><span class="fat_text">Vancouver</span></div>
+                            <textarea></textarea>
+                        </li>
+                        <li>
+                            <div class="fa_title"><span class="fat_text">Chicago</span></div>
+                            <input type="text" />
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="m_b">
+                <div class="s_btn">
+                    <a href="" class="btn btn_xs btn_blue"><span>BibTex 다운로드</span></a>
+                    <a href="" class="btn btn_xs btn_blue"><span>RIS 다운로드</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
