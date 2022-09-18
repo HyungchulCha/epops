@@ -1321,7 +1321,7 @@ textarea {max-width:100%; min-width:100%;}
 .refer_box .rb_class > ul > li > strong {display:inline; vertical-align:middle; font-size:12px; line-height:20px; color:#888;}
 .refer_box .rb_class > ul > li > strong {font-weight:500;}
 .refer_box .rb_class > ul > li .btn_mail {display:inline-block; width:16px; height:16px; background:url(../image/common/ico_mail_64_b.png) no-repeat center center / 100%; vertical-align:middle; margin-left:4px; opacity:0.48;}
-.refer_box .rb_class > ul > li .btn_id {display:inline-block; width:16px; height:16px; border-radius:50%; background:url(../image/common/ico_id.png) no-repeat #a6ce39 center center / 100%; vertical-align:middle; margin-left:4px;}
+.refer_box .rb_class > ul > li .btn_id {display:inline-block; width:16px; height:16px; border-radius:50%; background:url(../image/common/ico_id.png) no-repeat center center / auto 100%; vertical-align:middle; margin-left:4px;}
 .refer_box .rb_class > ul > li .btn_isni {display:inline-block; width:26px; height:16px; background:url(../image/common/ico_isni.png) no-repeat center center / auto 100%; vertical-align:middle; margin-left:4px;}
 
 .refer_box .rb_descript {display:none; margin-top:8px;}
@@ -1595,7 +1595,7 @@ textarea {max-width:100%; min-width:100%;}
 .content_detail_view .cdv_class > ul > li > strong {display:inline; vertical-align:middle; font-size:14px; line-height:22px; color:#888;}
 .content_detail_view .cdv_class > ul > li > strong {font-weight:500;}
 .content_detail_view .cdv_class > ul > li .btn_mail {display:inline-block; width:16px; height:16px; background:url(../image/common/ico_mail_64_b.png) no-repeat center center / 100%; vertical-align:middle; margin-left:4px; opacity:0.48;}
-.content_detail_view .cdv_class > ul > li .btn_id {display:inline-block; width:16px; height:16px; border-radius:50%; background:url(../image/common/ico_id.png) no-repeat #a6ce39 center center / 100%; vertical-align:middle; margin-left:4px;}
+.content_detail_view .cdv_class > ul > li .btn_id {display:inline-block; width:16px; height:16px; border-radius:50%; background:url(../image/common/ico_id.png) no-repeat center center / auto 100%; vertical-align:middle; margin-left:4px;}
 .content_detail_view .cdv_class > ul > li .btn_isni {display:inline-block; width:26px; height:16px; background:url(../image/common/ico_isni.png) no-repeat center center / auto 100%; vertical-align:middle; margin-left:4px;}
 
 .content_detail_view .cdv_field > ul > li {display:inline-block; padding:2px 0; font-size:12px; line-height:20px; color:#222; margin-right:8px;}
@@ -1669,7 +1669,7 @@ textarea {max-width:100%; min-width:100%;}
 .collection_detail_view .cdv_class {margin-top:16px;}
 .collection_detail_view .cdv_class span {display:inline-block; font-size:12px; line-height:20px; color:#666; vertical-align:middle;}
 .collection_detail_view .cdv_class .btn_mail {display:inline-block; width:16px; height:16px; background:url(../image/common/ico_mail_64_b.png) no-repeat center center / 100%; vertical-align:middle; margin-left:4px; opacity:0.48;}
-.collection_detail_view .cdv_class .btn_id {display:inline-block; width:16px; height:16px; border-radius:50%; background:url(../image/common/ico_id.png) no-repeat #a6ce39 center center / 100%; vertical-align:middle; margin-left:4px;}
+.collection_detail_view .cdv_class .btn_id {display:inline-block; width:16px; height:16px; border-radius:50%; background:url(../image/common/ico_id.png) no-repeat center center / auto 100%; vertical-align:middle; margin-left:4px;}
 .collection_detail_view .cdv_class .btn_isni {display:inline-block; width:26px; height:16px; background:url(../image/common/ico_isni.png) no-repeat center center / auto 100%; vertical-align:middle; margin-left:4px;}
 .collection_detail_view .cdv_count {margin-top:24px;}
 .collection_detail_view .cdv_count > ul {margin:0 -2px;}
