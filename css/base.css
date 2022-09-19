@@ -1303,6 +1303,7 @@ textarea {max-width:100%; min-width:100%;}
 .refer_area_image .refer_box .rb_b {height:66px;}
 
 .refer_box .rb_thumb {position:relative; border:1px solid #ddd; z-index:0; background:url() no-repeat center center / cover;}
+.refer_box .rb_thumb img {display:block; width:100%; height:100%; object-fit:cover;}
 .refer_box .rb_thumb .rbt_btns {display:none; position:absolute; left:0; bottom:0; table-layout:fixed; width:100%;}
 .refer_box .rb_thumb .rbt_btns a {display:table-cell; height:32px;}
 .refer_box .rb_thumb .rbt_btns .btn_search {background:url(../image/common/ico_search_64_w.png) no-repeat rgba(0,0,0,0.16) center center / 20px;}
