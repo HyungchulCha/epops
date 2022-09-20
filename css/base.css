@@ -777,7 +777,7 @@ textarea {max-width:100%; min-width:100%;}
 .form_xs .f_tbl_dash {width:16px; font-size:12px; line-height:32px;}
 
 .f_check, .f_radio {position:relative; display:inline-block;}
-.f_check input, .f_radio input {position:absolute; left:0; top:0; display:block; width:0; height:0; overflow:hidden;}
+.f_check input, .f_radio input {position:absolute; left:0; top:0; display:block; width:0; height:0; overflow:hidden; visibility:hidden; appearance:none;}
 .f_check label, .f_radio label {display:block; position:relative; text-indent:8px; word-break:break-all;}
 .f_check input:focus + label, .f_radio input:focus + label {outline:1px solid red;}
 .f_check label::before, .f_radio label::before, .f_radio label::after {position:absolute; left:0; top:50%; display:block; content:''; transform:translateY(-50%);}
