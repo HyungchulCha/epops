@@ -12,7 +12,10 @@
 /* main visual */
 .m_visual {position:relative; font-size:0; line-height:0;}
 .m_visual_slide {overflow:hidden;}
-.m_visual_slide .s_w .sw_l {width:100%; background:url() no-repeat #ddd center center / cover;}
+.m_visual_slide .s_w .sw_l {width:100%; background:url() no-repeat #b8daee center center / cover;}
+.m_visual_slide .s_w .sw_l > a {display:block;}
+.m_visual_slide .s_w .sw_l > a > strong {display:block; font-weight:700; color:#20376a;}
+.m_visual_slide .s_w .sw_l > a > span {display:block; color:#333;}
 .m_visual .mv_btn {position:absolute; left:0; bottom:0;}
 .m_visual .mv_btn > * {display:inline-block; vertical-align:middle;}
 .m_visual .mv_btn .s_c {font-family:'Arial'; font-size:14px; line-height:32px; padding:0 8px;}
@@ -25,19 +28,28 @@
 
 @media (min-width:1180px) {
   .m_visual .mv_btn {margin:32px;}
+  .m_visual_slide .s_w .sw_l > a {padding:60px 64px;}
+  .m_visual_slide .s_w .sw_l > a > strong {font-size:40px; line-height:48px;}
+  .m_visual_slide .s_w .sw_l > a > span {font-size:16px; line-height:32px; margin-top:32px;}
 }
 @media (min-width:768px) and (max-width:1179px) {
   .m_visual .mv_btn {margin:24px;}
+  .m_visual_slide .s_w .sw_l > a {padding:28px 32px;}
+  .m_visual_slide .s_w .sw_l > a > strong {font-size:24px; line-height:32px;}
+  .m_visual_slide .s_w .sw_l > a > span {font-size:15px; line-height:23px; margin-top:24px;}
 }
 @media (max-width:767px) {
   .m_visual .mv_btn {margin:16px;}
+  .m_visual_slide .s_w .sw_l > a {padding:24px 28px;}
+  .m_visual_slide .s_w .sw_l > a > strong {font-size:24px; line-height:32px;}
+  .m_visual_slide .s_w .sw_l > a > span {display:none;}
 }
 
 /* main top */
 .m_top {position:relative; font-size:0; line-height:0; text-align:center; margin-top:64px;}
 .m_top h3 {display:inline-block; font-size:32px; line-height:40px; font-weight:500;}
-.m_top .btn_more {position:absolute; right:0; top:50%; transform:translateY(-50%); display:inline-block; padding-right:16px;}
-.m_top .btn_more > span {display:inline-block; vertical-align:middle; font-size:12px; line-height:20px; color:#666;}
+.m_top .btn_more {position:absolute; right:0; top:0; display:inline-block; padding-right:16px; margin-top:18px;}
+.m_top .btn_more > span {display:inline-block; vertical-align:middle; font-size:14px; line-height:22px; color:#666;}
 .m_top .btn_more::after {display:block; content:''; width:16px; height:16px; background:url(../image/common/ico_next_64_b.png) no-repeat center center / 64%; opacity:0.48; position:absolute; right:0; top:50%; transform:translateY(-50%);}
 
 

@@ -46,6 +46,6 @@ function mCollectionSlide() {
 
 $(function(){
   fnSlide({ dom: '.m_visual_slide', loop: true, auto: true});
-  afterHasCheck('.m_visual_slide .sw_l', domRatio, true, (1/3));
+  afterHasCheck('.m_visual_slide .sw_l a', domRatio, true, (1/3));
   mCollectionSlide();
 });

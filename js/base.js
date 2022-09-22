@@ -898,65 +898,65 @@ function referareaTgl() {
     });
 }
 
-var collectionDescriptTglCount = 0;
+// var collectionDescriptTglCount = 0;
 
-function collectionDescriptTgl() {
+// function collectionDescriptTgl() {
 
-    var cd = $('.collection_detail_view .cdv_descript');
-    var cdp = cd.find('p');
-    var cdpH = cdp.outerHeight();
-    console.log(cdpH);
-    if (cdpH > 110) {
-        cd.addClass('is_max');
-        if (collectionDescriptTglCount === 0) {
-            cd.find('.btn_more').click(function(){
-                var isOpen = cd.hasClass('open');
-                if (!isOpen) {
-                    cd.addClass('open');
-                    $(this).find('i').addClass('ico_minus');
-                    $(this).find('span').text('닫기');
-                } else {
-                    cd.removeClass('open');
-                    $(this).find('i').removeClass('ico_minus');
-                    $(this).find('span').text('더보기');
-                }
-                return false;
-            });
-            collectionDescriptTglCount = 1;
-        }
-    } else {
-        cd.removeClass('is_max');
-    }
+//     var cd = $('.collection_detail_view .cdv_descript');
+//     var cdp = cd.find('p');
+//     var cdpH = cdp.outerHeight();
+//     console.log(cdpH);
+//     if (cdpH > 110) {
+//         cd.addClass('is_max');
+//         if (collectionDescriptTglCount === 0) {
+//             cd.find('.btn_more').click(function(){
+//                 var isOpen = cd.hasClass('open');
+//                 if (!isOpen) {
+//                     cd.addClass('open');
+//                     $(this).find('i').addClass('ico_minus');
+//                     $(this).find('span').text('닫기');
+//                 } else {
+//                     cd.removeClass('open');
+//                     $(this).find('i').removeClass('ico_minus');
+//                     $(this).find('span').text('더보기');
+//                 }
+//                 return false;
+//             });
+//             collectionDescriptTglCount = 1;
+//         }
+//     } else {
+//         cd.removeClass('is_max');
+//     }
 
-    $(window).on('resize', $.debounce(80, function(){
-        var cd = $('.collection_detail_view .cdv_descript');
-        var cdp = cd.find('p');
-        var cdpH = cdp.outerHeight();
+//     $(window).on('resize', $.debounce(80, function(){
+//         var cd = $('.collection_detail_view .cdv_descript');
+//         var cdp = cd.find('p');
+//         var cdpH = cdp.outerHeight();
 
-        if (cdpH > 110) {
-            cd.addClass('is_max');
-            if (collectionDescriptTglCount === 0) {
-                cd.find('.btn_more').click(function(){
-                    var isOpen = cd.hasClass('open');
-                    if (!isOpen) {
-                        cd.addClass('open');
-                        $(this).find('i').addClass('ico_minus');
-                        $(this).find('span').text('닫기');
-                    } else {
-                        cd.removeClass('open');
-                        $(this).find('i').removeClass('ico_minus');
-                        $(this).find('span').text('더보기');
-                    }
-                    return false;
-                });
-                collectionDescriptTglCount = 1;
-            }
-        } else {
-            cd.removeClass('is_max');
-        }
-    }));
+//         if (cdpH > 110) {
+//             cd.addClass('is_max');
+//             if (collectionDescriptTglCount === 0) {
+//                 cd.find('.btn_more').click(function(){
+//                     var isOpen = cd.hasClass('open');
+//                     if (!isOpen) {
+//                         cd.addClass('open');
+//                         $(this).find('i').addClass('ico_minus');
+//                         $(this).find('span').text('닫기');
+//                     } else {
+//                         cd.removeClass('open');
+//                         $(this).find('i').removeClass('ico_minus');
+//                         $(this).find('span').text('더보기');
+//                     }
+//                     return false;
+//                 });
+//                 collectionDescriptTglCount = 1;
+//             }
+//         } else {
+//             cd.removeClass('is_max');
+//         }
+//     }));
 
-}
+// }
 
 $(document).ready(function(){
     gnb();
@@ -985,6 +985,6 @@ $(document).ready(function(){
     referareaTgl();
     afterHasCheck('.collect_image_list > ul > li > div', domRatio, true, (3/4));
     afterHasCheck('.collection_detail_view .cdv_thumb', domRatio, true, (3/4));
-    collectionDescriptTgl();
+    // collectionDescriptTgl();
     
 });
