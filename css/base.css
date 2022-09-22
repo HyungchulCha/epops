@@ -1513,10 +1513,10 @@ textarea {max-width:100%; min-width:100%;}
 
 /* file upload list */
 .file_upload_list {border:1px solid #ddd; padding:12px 16px;}
-/* .file_upload_list > ul > li {padding:6px 0;} */
+.file_upload_list > ul > li {padding:2px 0;}
 .file_upload_list > ul > li * {vertical-align:middle;}
 .file_upload_list .ful_name::before {display:block; content:''; width:16px; height:16px; background:url(../image/common/data_icon_file.png) no-repeat center center / auto 100%; position:absolute; left:0; top:8px;}
-.file_upload_list .ful_name {position:relative; display:block; font-size:14px; line-height:22px; color:#256dbe; padding:5px 0; padding-left:22px; text-overflow:ellipsis; overflow:hidden; white-space:nowrap;}
+.file_upload_list .ful_name {position:relative; display:block; font-size:12px; line-height:20px; color:#256dbe; padding:6px 0; padding-left:22px; text-overflow:ellipsis; overflow:hidden; white-space:nowrap;}
 .file_upload_list .ico_img::before {background-image:url(../image/common/data_icon_img.png);}
 .file_upload_list .ico_pdf::before {background-image:url(../image/common/data_icon_pdf.png);}
 .file_upload_list .ico_xls::before {background-image:url(../image/common/data_icon_xlsx.png);}
@@ -1570,7 +1570,7 @@ textarea {max-width:100%; min-width:100%;}
 .collect_tab > ul > li {position:relative; display:inline-block;}
 .collect_tab > ul > li ~ li {padding-left:10px; margin-left:10px;}
 .collect_tab > ul > li ~ li::before {display:block; content:''; width:1px; height:16px; background:#ddd; position:absolute; left:0; top:50%; transform:translateY(-50%)}
-.collect_tab > ul > li > a {display:block; font-size:16px; line-height:24px; font-weight:500; color:#222;}
+.collect_tab > ul > li > a {display:block; font-size:18px; line-height:26px; font-weight:500; color:#222;}
 .collect_tab > ul > li.on > a {color:#256dbe;}
 
 /* collect list */
