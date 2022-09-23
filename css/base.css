@@ -1908,6 +1908,7 @@ textarea {max-width:100%; min-width:100%;}
 .board_list_table table td.ta_l {text-align:left;}
 .board_list_table table th {font-size:13px; line-height:21px; font-weight:500; letter-spacing:-0.048em; padding:10px; color:#222; background:#f8f8f8;}
 .board_list_table table td {font-size:14px; line-height:22px; padding:10px; color:#444;}
+.board_list_table .btn_sort {display:inline-block; width:16px; height:16px; vertical-align:middle; background:url(../image/common/ico_sort_64_b.png) no-repeat center center / 64%; margin-left:4px; opacity:0.8;}
 .board_list_table .bl_link {font-size:14px; line-height:22px; color:#222;}
 .board_list_table .bl_link:hover {color:#282e89;}
 .board_list_table .no_list {padding:64px 0; font-weight:500; color:#888;}
@@ -2321,3 +2322,6 @@ textarea {max-width:100%; min-width:100%;}
     .error .e_title_en {font-size:14px; margin-top:4px;}
     .error .e_descript {margin-top:16px;}
 }
+
+/* s hr */
+.s_hr {display:block; border:0; height:1px; background:#222;}
