@@ -338,6 +338,11 @@ function tabCommon(wrapClass) {
     tabContent.removeClass("on");
     tabContent.first().addClass("on");
 
+    var isIbw = tabContent.find('.ib_w').length > 0;
+    isIbw && afterHasCheck('.ib_w', inlineBlockWidth);
+    var isReferThumb = tabContent.find('.refer_box .rb_thumb').length > 0;
+    isReferThumb && afterHasCheck('.refer_box .rb_thumb', domRatio, true, (3/4));
+
     tabList.find("a").click(function() {
 
         var 
@@ -353,15 +358,20 @@ function tabCommon(wrapClass) {
             tabContent.removeClass("on");
             tabContent.eq(thPIdx).addClass('on');
         }
+
+        var isIbw = tabContent.find('.ib_w').length > 0;
+        isIbw && afterHasCheck('.ib_w', inlineBlockWidth);
+        var isReferThumb = tabContent.find('.refer_box .rb_thumb').length > 0;
+        isReferThumb && afterHasCheck('.refer_box .rb_thumb', domRatio, true, (3/4));
         
-        var sTab = $(this).parents('.s_tab'),
-        	isSTab = sTab.length > 0,
-        	thPIdx = thP.index(),
-	        thPLeft = thPIdx === 0 ? (thP.position().left - 8) : (thP.position().left);
+        // var sTab = $(this).parents('.s_tab'),
+        // 	isSTab = sTab.length > 0,
+        // 	thPIdx = thP.index(),
+	    //     thPLeft = thPIdx === 0 ? (thP.position().left - 8) : (thP.position().left);
         
-        if (isSTab) {
-        	sTab.animate({ scrollLeft: thPLeft }, 160, 'swing');
-        }
+        // if (isSTab) {
+        // 	sTab.animate({ scrollLeft: thPLeft }, 160, 'swing');
+        // }
 
         return false;
     });
@@ -699,20 +709,26 @@ function referView() {
     var referList = $('.refer_list');
 
     btnSquare.click(function(){
+        // var isList = referList.hasClass('refer_list_list');
+        var referList = $(this).parents('.s_top').parent().find('.refer_list');
         var isList = referList.hasClass('refer_list_list');
         if (isList) {
             $(this).addClass('on');
-            btnList.removeClass('on');
+            $(this).parent().parent().next().find('.btn_view_list').removeClass('on');
+            // btnList.removeClass('on');
             referList.removeClass('refer_list_list');
             afterHasCheck('.refer_box .rb_thumb', domRatio, true, (3/4));
         }
         return false;
     });
     btnList.click(function(){
+        // var isList = referList.hasClass('refer_list_list');
+        var referList = $(this).parents('.s_top').parent().find('.refer_list');
         var isList = referList.hasClass('refer_list_list');
         if (!isList) {
             $(this).addClass('on');
-            btnSquare.removeClass('on');
+            $(this).parent().parent().prev().find('.btn_view_square').removeClass('on');
+            // btnSquare.removeClass('on');
             referList.find('.lt_p').removeClass('open');
             referList.addClass('refer_list_list');
             afterHasCheck('.refer_box .rb_thumb', domRatio, true, (3/4));
@@ -898,66 +914,6 @@ function referareaTgl() {
     });
 }
 
-// var collectionDescriptTglCount = 0;
-
-// function collectionDescriptTgl() {
-
-//     var cd = $('.collection_detail_view .cdv_descript');
-//     var cdp = cd.find('p');
-//     var cdpH = cdp.outerHeight();
-//     console.log(cdpH);
-//     if (cdpH > 110) {
-//         cd.addClass('is_max');
-//         if (collectionDescriptTglCount === 0) {
-//             cd.find('.btn_more').click(function(){
-//                 var isOpen = cd.hasClass('open');
-//                 if (!isOpen) {
-//                     cd.addClass('open');
-//                     $(this).find('i').addClass('ico_minus');
-//                     $(this).find('span').text('닫기');
-//                 } else {
-//                     cd.removeClass('open');
-//                     $(this).find('i').removeClass('ico_minus');
-//                     $(this).find('span').text('더보기');
-//                 }
-//                 return false;
-//             });
-//             collectionDescriptTglCount = 1;
-//         }
-//     } else {
-//         cd.removeClass('is_max');
-//     }
-
-//     $(window).on('resize', $.debounce(80, function(){
-//         var cd = $('.collection_detail_view .cdv_descript');
-//         var cdp = cd.find('p');
-//         var cdpH = cdp.outerHeight();
-
-//         if (cdpH > 110) {
-//             cd.addClass('is_max');
-//             if (collectionDescriptTglCount === 0) {
-//                 cd.find('.btn_more').click(function(){
-//                     var isOpen = cd.hasClass('open');
-//                     if (!isOpen) {
-//                         cd.addClass('open');
-//                         $(this).find('i').addClass('ico_minus');
-//                         $(this).find('span').text('닫기');
-//                     } else {
-//                         cd.removeClass('open');
-//                         $(this).find('i').removeClass('ico_minus');
-//                         $(this).find('span').text('더보기');
-//                     }
-//                     return false;
-//                 });
-//                 collectionDescriptTglCount = 1;
-//             }
-//         } else {
-//             cd.removeClass('is_max');
-//         }
-//     }));
-
-// }
-
 $(document).ready(function(){
     gnb();
     setTimeout(function(){
@@ -985,6 +941,5 @@ $(document).ready(function(){
     referareaTgl();
     afterHasCheck('.collect_image_list > ul > li > div', domRatio, true, (3/4));
     afterHasCheck('.collection_detail_view .cdv_thumb', domRatio, true, (3/4));
-    // collectionDescriptTgl();
     
 });
