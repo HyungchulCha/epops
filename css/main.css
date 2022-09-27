@@ -55,7 +55,7 @@
 
 /* main collection */
 .m_collection {overflow:hidden;}
-.m_collection .mc_list > div > div .refer_box .rb_title > a {white-space:initial;}
+/* .m_collection .mc_list > div > div .refer_box .rb_title > a {white-space:initial;} */
 
 @media (min-width:1180px) {
 	.m_collection .mc_list > div {margin:-32px -16px 0; padding:32px 0; white-space:initial}
@@ -80,8 +80,8 @@
 .m_content .mc_list > ul > li {width:100% !important; padding:16px 0 !important; border-bottom:1px solid #ddd;}
 
 /* main refer */
-.main_container .refer_box .rb_title a {font-size:18px; line-height:26px; height:52px;}
-.main_container .refer_list_list .refer_box .rb_title a {height:auto;}
+.main_container .refer_box .rb_title a {font-size:18px; line-height:26px;}
+/* .main_container .refer_list_list .refer_box .rb_title a {height:auto;} */
 .main_container .refer_box .rb_content_count_t {font-size:14px; line-height:22px;}
 .main_container .refer_box .rb_writer span {font-size:14px; line-height:22px;}
 .main_container .refer_box .rb_date span {font-size:14px; line-height:22px;}
