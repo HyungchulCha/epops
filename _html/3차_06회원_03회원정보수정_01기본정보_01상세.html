@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 
-    <title>회원정보수정 이메일 변경</title>
+    <title>회원정보수정 기본정보수정</title>
 
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -244,7 +244,7 @@
 
                 <div class="sub_top cl_b_aftr">
                     <div class="fl_l">
-                        <h3 class="st_title">개인정보수정</h3>
+                        <h3 class="st_title">회원기본정보</h3>
                     </div>
                     <div class="fl_r">
                         <div class="st_navigation">
@@ -258,34 +258,151 @@
 
                 <!-- s: content -->
 
-                <div class="s_tab mg_t32">
-                    <ul>
-                        <li><a href="">기본정보수정</a></li>
-                        <li><a href="">비밀번호변경</a></li>
-                        <li class="on"><a href="">이메일변경</a></li>
-                    </ul>
-                </div>
+                <div class="user_info">
 
-                <div class="user_info user_info_48">
-
-                    <div class="form_area form_sm mg_t32">
-                        <ul>
-                            <li>
-                                <div class="fa_title"><span class="fat_text">현재 이메일</span><i class="ico_essential"></i></div>
-                                <span class="f_txt text_14 tc_2564e7 fw_500">ckgudcjf@gmail.com</span>
-                            </li>
-                            <li>
-                                <div class="fa_title"><span class="fat_text">새로운 이메일 입력</span><i class="ico_essential"></i></div>
-                                <input type="text" placeholder="새로운 이메일을 입력해주세요.">
-                                <p class="text_12 tc_666666 mg_t8">새로운 이메일로 인증완료 후 변경이 완료됩니다.</p>
-                            </li>
-                        </ul>
+                    <div class="l_t_b_t ui_form mg_t32">
+                        <div>
+                            <div class="form_area form_sm">
+                                <ul>
+                                    <li>
+                                        <!-- <div class="fa_title"><span class="fat_text">프로필 이미지</span><i class="ico_essential"></i></div> -->
+                                        <div class="f_profile mg_t8"><i></i></div>
+                                        <!-- <p class="text_12 tc_666666 ta_c mg_t12">권장 사이즈 : 180 * 180</p>
+                                        <div class="s_btn mg_t8">
+                                            <a href="" class="btn btn_xx btn_black"><span>변경</span></a>
+                                            <a href="" class="btn btn_xx btn_gray"><span>초기화</span></a>
+                                        </div> -->
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                            <p>여기서 갑자기 테이블 형태로 들어가게 할건지요 / 제목줄 여기는 왼쪽정렬이고 사용자프로파일은 가운데 정렬입니다.</p>
+                            <div class="data_table_14 form_xs">
+                                <table>
+                                    <colgroup>
+                                        <col style="width:120px;">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th class="ta_l">아이디</th>
+                                            <td class="ta_l">sdfgSrdgWSERfg</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="ta_l">성명</th>
+                                            <td class="ta_l">홍길동</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="ta_l">이메일</th>
+                                            <td class="ta_l">ckgudcjf@gmail.com</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="ta_l">소속</th>
+                                            <td class="ta_l">Epops</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="ta_l">연구분야</th>
+                                            <td class="ta_l">연구분야</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="ta_l">ISNI<div class="f_guide"><i class="ico_guide">!</i><p>입력내용 대기중</p></div></th>
+                                            <td class="ta_l">459068720349857690283546</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="ta_l">ORCID<div class="f_guide"><i class="ico_guide">!</i><p>입력내용 대기중</p></div></th>
+                                            <td class="ta_l">309458672-34809567-2908745-689024-059768</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="ta_l">그룹</th>
+                                            <td class="ta_l">
+                                                <div class="f_check"><input type="checkbox" name="" id=""><label for="" class="f_txt">시스템 관리자</label></div>
+                                                <div class="f_check"><input type="checkbox" name="" id=""><label for="" class="f_txt">일반회원</label></div>
+                                                <div class="f_check"><input type="checkbox" name="" id=""><label for="" class="f_txt">심사자</label></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="ta_l">회원상태</th>
+                                            <td class="ta_l">사용중</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="ta_l">작성일시</th>
+                                            <td class="ta_l">2000년 00월 00일 (화) 오후 00:00:00</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="s_btn mg_t64">
-                        <a href="" class="btn btn_sm btn_blue"><span>인증메일발송</span></a>
+                        <a href="" class="btn btn_sm btn_black"><span>삭제</span></a>
+                        <a href="" class="btn btn_sm btn_blue"><span>수정</span></a>
+                    </div>
+                </div>
+
+                <div class="user_info">
+
+                    <div class="l_t_b_t ui_form mg_t32">
+                        <div>
+                            <div class="form_area form_sm">
+                                <ul>
+                                    <li>
+                                        <!-- <div class="fa_title"><span class="fat_text">프로필 이미지</span><i class="ico_essential"></i></div> -->
+                                        <div class="f_profile mg_t8"><i></i></div>
+                                        <!-- <p class="text_12 tc_666666 ta_c mg_t12">권장 사이즈 : 180 * 180</p>
+                                        <div class="s_btn mg_t8">
+                                            <a href="" class="btn btn_xx btn_black"><span>변경</span></a>
+                                            <a href="" class="btn btn_xx btn_gray"><span>초기화</span></a>
+                                        </div> -->
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="form_area form_sm">
+                                <ul>
+                                    <li>
+                                        <div class="fa_title"><span class="fat_text">아이디</span></div>
+                                        <p class="f_txt text_14 fw_500 tc_666666">ckgudcjf</p>
+                                    </li>
+                                    <li>
+                                        <div class="fa_title"><span class="fat_text">성명</span></div>
+                                        <p class="f_txt text_14 fw_500 tc_666666">홍길동</p>
+                                    </li>
+                                    <li>
+                                        <div class="fa_title"><span class="fat_text">소속</span></div>
+                                        <p class="f_txt text_14 fw_500 tc_666666">EPOPS</p>
+                                    </li>
+                                    <li>
+                                        <div class="fa_title"><span class="fat_text">연구분야</span></div>
+                                        <p class="f_txt text_14 fw_500 tc_666666">연구분야</p>
+                                    </li>
+                                    <li>
+                                        <div class="fa_title"><span class="fat_text">ISNI</span><div class="f_guide"><i class="ico_guide">!</i><p>입력내용 대기중</p></div></div>
+                                        <p class="f_txt text_14 fw_500 tc_666666">12341345ㅂ2345346245</p>
+                                    </li>
+                                    <li>
+                                        <div class="fa_title"><span class="fat_text">ORCID</span><div class="f_guide"><i class="ico_guide">!</i><p>입력내용 대기중</p></div></div>
+                                        <p class="f_txt text_14 fw_500 tc_666666">12341345ㅂ2345346245</p>
+                                    </li>
+                                    <li>
+                                        <div class="fa_title"><span class="fat_text">회원상태</span></div>
+                                        <p class="f_txt text_14 fw_500 tc_666666">사용중</p>
+                                    </li>
+                                    <li>
+                                        <div class="fa_title"><span class="fat_text">작성일시</span></div>
+                                        <p class="f_txt text_14 fw_500 tc_666666">2000년 00월 00일 (화) 오후 00:00:00</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
 
+                    <div class="s_btn mg_t64">
+                        <a href="" class="btn btn_sm btn_black"><span>삭제</span></a>
+                        <a href="" class="btn btn_sm btn_blue"><span>수정</span></a>
+                    </div>
                 </div>
 
                 <!-- e: content -->
