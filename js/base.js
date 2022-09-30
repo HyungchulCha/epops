@@ -931,7 +931,7 @@ $(document).ready(function(){
     afterHasCheck('.ib_w', inlineBlockWidth);
     afterHasCheck('.f_unit', fUnitTextWidth);
     // afterHasCheck('.form_area', formAreaTitleWidth);
-    afterHasCheck('.s_tab', subTabScroll);
+    // afterHasCheck('.s_tab', subTabScroll);
     afterHasCheck('.board_link', boardLinkWidth);
     fCheckToggle();
     fnSlideTab();
